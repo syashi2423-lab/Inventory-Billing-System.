@@ -1,0 +1,29 @@
+{
+  "name": "munnem-retail-erp",
+  "version": "2.0.0",
+  "description": "MUNNEM — Production-Ready Multi-Tenant Full-Stack Smart Retail ERP & POS Management System (Node.js + Express + MySQL)",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "db:init": "node backend/database/initDb.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "allowScripts": {
+    "bcrypt@5.1.1": true
+  }
+}

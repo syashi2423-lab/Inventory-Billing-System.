@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MUNNEM — Smart Retail ERP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="MUNNEM — Multi-Business Full-Stack Smart Retail ERP & POS Management System">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;600;700&family=Noto+Sans+Tamil:wght@400;600;700&family=Noto+Sans+Telugu:wght@400;600;700&family=Noto+Sans+Gujarati:wght@400;600;700&family=Noto+Sans+Kannada:wght@400;600;700&family=Noto+Sans+Malayalam:wght@400;600;700&family=Noto+Sans+Gurmukhi:wght@400;600;700&family=Noto+Sans+Oriya:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+</head>
+<body>
+  <div class="drawer-backdrop" onclick="document.body.classList.remove('dr')"></div>
+  <aside>
+    <div class="logo"><span class="lg">M</span><span class="lb">MUNNEM</span></div>
+    <nav id="nv"></nav>
+    <div class="bp2">
+      <div class="bz"><span class="av" id="mxAv">M</span><span class="lb" id="mxBz">MUNNEM</span></div>
+      <a class="fa" onclick="go('settings')" id="hp"></a>
+      <a class="fa" onclick="document.body.classList.toggle('mini')" id="cl"></a>
+    </div>
+  </aside>
+  <div class="w">
+    <header class="top">
+      <button class="ib" id="mb" aria-label="Menu" onclick="document.body.classList.toggle('dr')"></button>
+      <div id="pt"></div>
+      <input class="in gs hm" id="gq" placeholder="Search products, invoices, customers…" onkeydown="if(event.key=='Enter'){S.q=this.value;go('products')}">
+      <select class="in" id="lg" style="width:auto;padding:6px 8px;font-weight:600" title="Language / भाषा" aria-label="Language" onchange="setLang(this.value)">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+      </select>
+      <div style="position:relative">
+        <button class="ib" id="bn" aria-label="Notifications" onclick="dd('d1')"></button>
+        <div class="dd" id="d1"></div>
+      </div>
+      <button class="ib" id="hb" aria-label="Help" onclick="go('settings')"></button>
+      <button class="ib" id="th" aria-label="Toggle theme" onclick="var r=document.documentElement;r.dataset.theme=r.dataset.theme=='dark'?'light':'dark'"></button>
+      <span id="pa"></span>
+      <div style="position:relative">
+        <span class="av ck" id="mxAv2" onclick="dd('d2')">–</span>
+        <div class="dd" id="d2">
+          <a id="mxMe">–</a>
+          <a onclick="go('settings')">Profile & settings</a>
+          <a onclick="go('msettings')">Business settings</a>
+          <a onclick="mxLogout()">Sign out</a>
+        </div>
+      </div>
+    </header>
+    <main id="v"></main>
+  </div>
+  <div id="ts"></div>
+  <div id="tip"></div>
+  <div id="mo"></div>
+  <div id="mxa" role="dialog" aria-modal="true" aria-label="Sign in"></div>
+
+  <script src="/js/i18n.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
